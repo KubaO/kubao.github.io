@@ -1,0 +1,10 @@
+@media print { 
+    .js-toggle-dark-mode-narrow,
+    .js-toggle-dark-mode-wide { 
+        display: none !important;
+    }
+}
+
+img.spaced {
+    margin-left: 1em;
+}

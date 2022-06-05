@@ -1,0 +1,14 @@
+{% if page.has_child_toc == true %}
+  Sub-Pages
+  {: .text-delta}
+
+  {% include child_toc.html %}
+{% endif %}
+
+{% if page.has_toc != false %}
+  On This Page
+  {: .text-delta}
+{% endif %}
+
+1. TOC
+{:toc}

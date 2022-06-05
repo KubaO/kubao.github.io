@@ -1,0 +1,35 @@
+title: "Kuba's Eristic Glyptics"
+tagline: "A collection of engineering content"
+email: kuba@mareimbrium.org
+github_username: kubao
+
+description: >-
+  A site mostly related to engineering.
+
+remote_theme: pmarsceill/just-the-docs
+
+gh_edit_link: false
+
+markdown: kramdown
+
+plugins:
+  - jekyll-feed
+
+kramdown:
+  parse_block_html: true
+  parse_span_html: true
+
+#baseurl: "" # the subpath of your site, e.g. /blog
+#url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

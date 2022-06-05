@@ -1,0 +1,39 @@
+<button class="btn js-toggle-dark-mode-narrow d-block d-md-none"/>
+<button class="btn js-toggle-dark-mode-wide d-none d-md-block" style="margin: 5px"/>
+
+<script type="text/javascript">
+(()=>{
+  const toggle_n = document.querySelector('.js-toggle-dark-mode-narrow');
+  const toggle_w = document.querySelector('.js-toggle-dark-mode-wide');
+  
+  function setTheme(newTheme, setJTDTheme) {
+    if (setJTDTheme) {
+      jtd.setTheme(newTheme);
+      localStorage.setItem("jtd_theme", newTheme);
+    }
+    if (newTheme === 'dark') {
+      toggle_n.textContent = 'Bring Light';
+      toggle_w.textContent = 'Bring Light';
+    }
+    else {
+      toggle_n.textContent = 'Bring Darkness';
+      toggle_w.textContent = 'Bring Darkness';
+    }
+  }
+
+  function toggler() {
+    if (jtd.getTheme() === 'dark')
+      setTheme('light', true);
+    else
+      setTheme('dark', true);
+  }
+
+  jtd.addEvent(toggle_n, 'click', toggler);
+  jtd.addEvent(toggle_w, 'click', toggler);
+
+  document.querySelector('.site-title').after(toggle_n);
+  /* document.querySelector('.site-header').after(toggle_w); */
+  document.querySelector('.search').after(toggle_w);
+  jtd.onReady(()=>{ setTheme(jtd.getTheme(), false) });
+})();
+</script>
